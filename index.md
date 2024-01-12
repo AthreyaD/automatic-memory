@@ -1,3 +1,3 @@
 ---
-subtitle: Learning to learn
+title: Learning to learn
 ---
