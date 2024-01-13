@@ -24,7 +24,7 @@ I think a good place to start is actually with comparing the "learning" that hap
 
 ![updating weights](https://miro.medium.com/v2/resize:fit:566/1*2wULsk4M4HG12bZ5cB-bPA.png)
 
-In short, neural networks learn by updating weights: parameters that determine how much each input matters to the output. All this formula is saying is "update a weight in a network by taking the partial of the cost with respect to the current weight" (for a deeper dive into how the chain rule makes this work see [this excellent medium article](https://towardsdatascience.com/neural-networks-backpropagation-by-dr-lihi-gur-arie-27be67d8fdce)).
+In short, neural networks learn by updating weights: parameters that determine how much each input matters to the output. All this formula is saying is "update a weight in a network by taking the partial of the cost with respect to the current weight" (for a deeper dive into how the chain rule makes this work, see [this excellent medium article](https://towardsdatascience.com/neural-networks-backpropagation-by-dr-lihi-gur-arie-27be67d8fdce)).
 
 Now, what's important to notice here is that we need the system's outcome (i.e. the weather on Saturday) to compute the gradient and update the weights. But what we really want, and what TDL does, is to update the weights at each time step. So instead of this formula:
 
@@ -42,7 +42,7 @@ A bit of algebra on that insight leads to a modified form of our original formul
 
 Again, pay attention to the subtle changes here:
 1. We're not reliant on knowing the value of the target state;instead we compute error based on the difference in successive predictions
-2. We calculate the gradient based on V~t~ (a prediction at each time step) rather than V(S~t~) (relative to our target state).
+2. We calculate the gradient based on V^t^ (a prediction at each time step) rather than V(s^t^) (relative to our target state).
 
 There is one other critical point here--TDL maintains the gradient as a running sum. As we update current weights, in other words, we're also updating past predictions. Intuitively, this makes sense, because past states are linked to the more recent states we're observing.
 
