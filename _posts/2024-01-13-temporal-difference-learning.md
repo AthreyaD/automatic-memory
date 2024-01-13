@@ -42,7 +42,7 @@ A bit of algebra on that insight leads to a modified form of our original formul
 
 Again, pay attention to the subtle changes here:
 1. We're not reliant on knowing the value of the target state;instead we compute error based on the difference in successive predictions
-2. We calculate the gradient based on V^t^ (a prediction at each time step) rather than V(s^t^) (relative to our target state).
+2. We calculate the gradient based on V<sub>t</sub> (a prediction at each time step) rather than V(s<sub>t</sub>) (relative to our target state).
 
 There is one other critical point here--TDL maintains the gradient as a running sum. As we update current weights, in other words, we're also updating past predictions. Intuitively, this makes sense, because past states are linked to the more recent states we're observing.
 
