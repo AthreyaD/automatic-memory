@@ -16,7 +16,7 @@ I think the best way to unpack the rest of TDL is through an example. We have a 
 
 ### How does TDL work?
 Before we jump in, i think it's worth recapping the primary components of TDL:
-1. Temporal: capture time compoenent of data
+1. Temporal: capture time component of data
 2. Difference: We'll get into this in a minute
 3. Learning: Learns through RL
 
